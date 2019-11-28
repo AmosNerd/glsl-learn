@@ -1,20 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<chart-drag></chart-drag>
+
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import ChartDrag from "./components/chart-drag.vue"
 
-@Component({
+export default {
+  name: 'app',
   components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+    ChartDrag
+  }
+}
 </script>
 
 <style>
@@ -24,6 +23,13 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
+  body{
+    margin: 0;
+  }
+  canvas:{
+    width: 100%;
+    height: 100%;
+  }
 </style>
